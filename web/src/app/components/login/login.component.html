@@ -1,0 +1,24 @@
+<div class="card login">
+  <div class="header">
+    <h4>OneApp</h4>
+    <h6>Sso Login</h6>
+  </div>
+  <div class="container">
+    <form [formGroup]="authGroup" class="form-login" (ngSubmit)="onSubmit()" autocomplete="off">
+      <div class="form-group">
+        <input type="email" class="form-control" id="email-address" placeholder="Email" formControlName="username"
+               (input)="onChange()">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password"
+               (input)="onChange()">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary submit" [disabled]="submitDisabled">Log In</button>
+      </div>
+      <div class="form-group error-panel" [style.visibility]="isHidden? 'hidden': 'visible'">
+        <p>{{errorMessage}}</p>
+      </div>
+    </form>
+  </div>
+</div>

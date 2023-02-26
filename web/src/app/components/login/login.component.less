@@ -1,0 +1,39 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 16px;
+  text-align: center;
+
+  &.login {
+    width: 20%;
+    margin: 150px auto;
+  }
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .form-login {
+    font-size: 12px;
+
+    .form-group {
+      margin: 10px;
+
+      input {
+        font-size: inherit;
+      }
+
+      .submit {
+        width: 100%;
+        font-size: inherit;
+      }
+
+      &.error-panel {
+        font-size: 14px;
+        color: rgba(var(--i30, 237, 73, 86), 1);
+      }
+    }
+  }
+}
+
+
